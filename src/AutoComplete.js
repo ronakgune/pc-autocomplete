@@ -23,7 +23,8 @@ class AutoComplete extends React.Component {
     let suggestions = [];
     if (value.length > 0) {
       const { radio } = this.state;
-      const regex = new RegExp(`^${value}`, "gi");
+      const temp = value.replace(/\\/g, "/");
+      const regex = new RegExp(`^${temp}`, "gi");
       if (radio === "all") {
         suggestionsAll = items.products
           .sort()
@@ -74,6 +75,7 @@ class AutoComplete extends React.Component {
   // Handle Suggestions
   renderSuggestions() {
     const { suggestions } = this.state;
+    const { radio } = this.state;
     if (suggestions === 0) {
       return null;
     }
@@ -84,13 +86,13 @@ class AutoComplete extends React.Component {
           <ul>
             <li onClick={() => this.displayData(item)}>
               <a href={item.url} target="_blank">
-                {item.name}{" "}
+                {item.name}
+                {radio === "all" ? "  in  " + item.type : ""}
               </a>
               {/* <li>{item.url}</li> */}
             </li>
           </ul>
         ))}
-        {/* </ul> */}
       </div>
     );
   }
