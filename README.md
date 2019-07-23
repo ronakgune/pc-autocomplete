@@ -21,6 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 
+Screenshot
+------------------
 
 
 ![Screenshot](https://github.com/ronakgune/pc-autocomplete/blob/master/screenshot.png)
