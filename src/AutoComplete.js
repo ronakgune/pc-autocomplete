@@ -28,6 +28,8 @@ class AutoComplete extends React.Component {
         suggestionsAll = items.products
           .sort()
           .filter(v => regex.test(v.name) && v.type);
+        // let sugg = new Set(suggestionsAll);
+        // suggestions = [...sugg].slice(0, 7);
         suggestions = suggestionsAll.slice(0, 7);
       } else if (radio === "bank") {
         suggestionsAll = items.products
