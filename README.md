@@ -14,6 +14,7 @@ To dos - future
 Improve UI <br>
 Handle duplicates <br>
 Reduce duplicate code <br>
+Imrpove suggestions in All<br>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
